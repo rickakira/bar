@@ -1,0 +1,47 @@
+<div class="list row">
+    <div class="col-md-8">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search by Descrição"
+          [(ngModel)]="descricao"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            (click)="searchTitle()"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h4>Lista de Marcas</h4>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let marca of marcaList; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActiveMarca(marca, i)"
+        >
+          {{ marca.descricao }}
+        </li>
+      </ul> 
+    </div>
+    <div class="col-md-6">
+      <div *ngIf="currentMarca">
+        <h4>Marca</h4>
+        <div>
+          <label><strong>Descrição:</strong></label> {{ currentMarca.descricao }}
+        </div>
+      </div>
+  
+      <div *ngIf="!currentMarca">
+        <br />
+        <p>Selecione uma marca</p>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,34 @@
+<link rel="stylesheet" type="text/css" href="./dist/semantic.min.css">
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="./dist/semantic.min.js"></script>
+
+  <div class="ui pointing menu">
+    <a class="item">
+      <a routerLink="view-preco-produto" role="button" >Preço Produto</a>  
+    </a>
+    <a class="item">
+      <a routerLink="view-produto" role="button" >Produto</a>  
+    </a>
+    <a class="item">
+      <a routerLink="view-produto" role="button" >Marca</a>  
+    </a>
+    <a class="item">
+      <a routerLink="view-produto" role="button" >Tipo</a>  
+    </a>
+
+    <div class="right menu">
+      <div class="item">
+        <div class="ui transparent icon input">
+          <input type="text" placeholder="Search...">
+          <i class="search link icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui segment">
+    <p></p>
+    <router-outlet></router-outlet>  
+  </div>

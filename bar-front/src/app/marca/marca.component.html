@@ -1,0 +1,36 @@
+<h3>Marca</h3>  
+<div class="row">  
+  <div class="col-sm-4"></div>  
+  <div class="col-sm-4" >  
+    <div [hidden]="submitted" style="width: 400px;">  
+      <form [formGroup]="form" #saveMarca (ngSubmit)="saveMarca(saveMarca)">  
+    
+        <div class="form-group">  
+              <label for="name">Descrição</label>  
+              <input type="text" class="form-control"  formControlName="descricao" data-toggle="tooltip"   
+                 data-placement="right" title="Descrição da Marca" >  
+              <div class="alert alert-danger" *ngIf = "(Descricao.touched) && (Descricao.invalid)"   
+                style="margin-top: 5px;">  
+                  <span *ngIf="Descricao.errors.required">Descrição é obrigatório</span>  
+                    <span *ngIf = "Descricao.errors.minlength">   
+                        O tamanho mínimo é de 1 caractere.
+                    </span>                     
+                </div>  
+          </div>  
+        
+          <button type="submit" class="btn btn-success">Salvar</button>  
+      </form>  
+  </div>  
+  </div>  
+  <div class="col-sm-4"></div>  
+</div>  
+<div class="row">  
+  <div class="col-sm-4"></div>  
+  <div class="col-sm-4">  
+      <div [hidden]="!submitted">  
+         <h4>Marca adicionada com sucesso!</h4>  
+         <button (click)="addForm" class='btn btn-primary'>Adicionar mais marca</button>  
+      </div>        
+  </div>  
+  <div class="col-sm-4"></div>  
+</div>  
