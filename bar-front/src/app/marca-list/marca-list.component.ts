@@ -3,7 +3,6 @@ import { MarcaService } from '../marca.service';
 import { Marca } from '../marca';
 import { Observable, Subject } from 'rxjs';
 import { FormControl,FormGroup,Validators } from '@angular/forms'; 
-import { DataTableModule } from 'angular-datatable';
 
 @Component({
   selector: 'app-marca-list',

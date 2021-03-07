@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';  
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';  
 import { HttpClientModule } from '@angular/common/http';  
-import {DataTablesModule} from 'angular-datatables';  
 import { TipoProdutoComponent } from './tipo-produto/tipo-produto.component';
 import { MarcaComponent } from './marca/marca.component';
 import { ProdutoComponent } from './produto/produto.component';
@@ -32,8 +31,7 @@ import { PrecoProdutoListComponent } from './preco-produto-list/preco-produto-li
     AppRoutingModule,
     FormsModule,  
     ReactiveFormsModule,  
-    HttpClientModule,  
-    DataTablesModule  
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
